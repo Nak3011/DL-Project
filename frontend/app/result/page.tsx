@@ -74,7 +74,7 @@ export default function ResultPage() {
 
       {/* ── Full-screen satellite map ──────────────────── */}
       <div className="flex-1 relative" style={{ minHeight: 0 }}>
-        <MapView data={data} fullscreen />
+        <MapView data={data} />
 
         {/* Glass overlay panels on top of the map */}
         <MapOverlay data={data} />
