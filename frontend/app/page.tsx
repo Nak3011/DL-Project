@@ -216,15 +216,14 @@ export default function HomePage() {
             3. Orange grid — materialises toward the right diagonal
            ══════════════════════════════════════════════════════════ */}
 
-        {/* Layer 1 — blurred background image (full page) */}
+        {/* Layer 1 — background image, full page, sharp + bright */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:    "url('/Background.jpg')",
             backgroundSize:     "cover",
             backgroundPosition: "center",
-            filter:             "blur(5px) brightness(0.88)",
-            transform:          "scale(1.07)",
+            filter:             "brightness(0.95)",
           }}
         />
 
@@ -234,21 +233,7 @@ export default function HomePage() {
           style={{ background: "rgba(5, 10, 15, 0.28)" }}
         />
 
-        {/* Layer 3 — orange grid, visible across page, denser on right */}
-        <div className="absolute inset-0 grid-wallpaper pointer-events-none" />
 
-        {/* Subtle warm glow — top-right corner */}
-        <motion.div
-          animate={{ opacity: [0.15, 0.25, 0.15] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 right-0 pointer-events-none"
-          style={{
-            width: "55vw", height: "55vw",
-            background:
-              "radial-gradient(circle, rgba(255,80,20,0.18) 0%, transparent 65%)",
-            transform: "translate(25%, -25%)",
-          }}
-        />
 
         {/* ══════════════════════════════════════════════════════════
             CONTENT
