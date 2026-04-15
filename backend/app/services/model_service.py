@@ -34,7 +34,15 @@ _lock = threading.Lock()
 # Path to the saved model (resolved relative to project root)
 _MODEL_PATH = os.environ.get(
     "MODEL_PATH",
-    os.path.join(os.path.dirname(__file__), "..", "..", "..", "saved_model.keras"),
+    os.path.normpath(
+        os.path.join(
+            os.path.dirname(__file__),   # .../backend/app/services/
+            "..",                         # .../backend/app/
+            "..",                         # .../backend/
+            "..",                         # .../DL-Project/
+            "saved_model.keras",
+        )
+    ),
 )
 
 
