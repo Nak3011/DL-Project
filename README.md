@@ -1,4 +1,4 @@
-# Invenio Ignis 🔥
+# Invenio Ignis 
 
 > **AI-powered system that detects and predicts wildfires early by analyzing environmental and satellite data to enable rapid prevention and response.**
 
